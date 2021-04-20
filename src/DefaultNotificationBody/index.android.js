@@ -45,7 +45,7 @@ class DefaultNotificationBody extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if ((prevProps.vibrate || this.props.vibrate) && this.props.isOpen && !prevProps.isOpen) {
+    if (this.props.vibrate && this.props.isOpen && !prevProps.isOpen) {
       Vibration.vibrate();
     }
   }
